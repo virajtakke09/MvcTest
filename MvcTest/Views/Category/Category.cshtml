@@ -1,0 +1,74 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+	var message = TempData["AlertMessage"] ?? string.Empty;
+}
+
+<script type="text/javascript">
+ var message = '@message';
+if(message) alert(message);
+</script>
+
+
+<br>
+<br>
+<div id="main-content">
+	<div class="container-fluid">
+		<div class="row clearfix">
+			<div class="col-lg-12">
+				<div class="card">
+					<div class="header">
+						<h2>Category Master List</h2>
+						<ul class="header-dropdown">
+							<li>
+								<button type="button" class="btn btn-sm btn-info" onclick="location.href='@Url.Action("Categorydetail", "Category", new { id = 0 })'"><i class="icon-plus"> </i> New</button>
+							</li>
+						</ul>
+					</div>
+					<div class="body">
+						<div class="table-responsive">
+							<table class="table table-hover js-basic-example dataTable table-custom">
+								<thead class="thead-dark">
+									<tr>
+										<th>Category Id</th>
+										<th>Category Name</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									@if (ViewBag.GetCategoryList != null)
+									{
+										foreach (var item in ViewBag.GetCategoryList)
+										{
+											<tr>
+												<td><span>@item.cat_id</span></td>
+												<td><span>@item.cat_name</span></td>
+												<td>
+													<button type="button" class="btn btn-sm btn-success" title="Edit" onclick="location.href='@Url.Action("Categorydetail", "Category", new { id = item.cat_id })'"><i class="icon-pencil"></i></button>
+													<button type="button" class="btn btn-sm btn-danger" title="Edit" onclick="location.href='@Url.Action("DeleteCategory", "Category", new { id = item.cat_id })'"><i class="icon-ban"> </i></button>
+													
+												</td>
+											</tr>
+										}
+									}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@section Scripts {
+	<script src="~/Theme/www.wrraptheme.com/templates/lucid/hr/html/light/assets/bundles/datatablescripts.bundle.js"></script>
+	<script src="~/Theme/www.wrraptheme.com/templates/lucid/hr/html/assets/vendor/sweetalert/sweetalert.min.js"></script>
+	<script src="~/Theme/www.wrraptheme.com/templates/lucid/hr/html/light/assets/js/pages/tables/jquery-datatable.js"></script>
+	<script src="~/Theme/www.wrraptheme.com/templates/lucid/hr/html/light/assets/js/pages/ui/dialogs.js"></script>
+}
+

@@ -1,0 +1,414 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{142CE044-64C6-4260-AA19-624B3C168178}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcTest</RootNamespace>
+    <AssemblyName>MvcTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44385</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Theme\backblue.gif" />
+    <Content Include="Theme\fade.gif" />
+    <Content Include="Theme\hts-cache\new.lst" />
+    <Content Include="Theme\hts-cache\new.txt" />
+    <Content Include="Theme\hts-cache\readme.txt" />
+    <Content Include="Theme\hts-log.txt" />
+    <Content Include="Theme\index.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\auth_bg.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\05-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\06-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\07-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\08-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\09-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\10-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\11-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\12-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\13-img.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\blog-page-1.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\blog-page-2.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\blog-page-3.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\blog\blog-page-4.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\1.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\10.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\11.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\12.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\13.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\14.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\15.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\2.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\3.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\4.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\5.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\6.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\7.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\8.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\image-gallery\9.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\lg\avatar2.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\mastercard.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\model1.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\model2.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\model3.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\paper-plane.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\paypal.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\plane.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\projects\01.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\projects\02.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\projects\03.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\sm\avatar1.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\sm\avatar2.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\sm\avatar3.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\sm\avatar4.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\sm\avatar5.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\sm\avatar6.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\space-ship.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\user-small.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\user.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\visa-card.png" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar1.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar10.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar2.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar3.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar4.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar5.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar6.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar7.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar8.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\images\xs\avatar9.jpg" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-multiselect\bootstrap-multiselect.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-progressbar\js\bootstrap-progressbar.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-treeview\bootstrap-treeview.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\chartist-plugin-tooltip\chartist-plugin-tooltip.css" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\chartist\css\chartist.min.css" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\dropify\js\dropify.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\flot-charts\jquery.flot.selection.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\fullcalendar\fullcalendar.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\horizontal-timeline\js\horizontal-timeline.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\jstree\jstree.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\light-gallery\js\lightgallery-all.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\LightboxGallery\mauGallery.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\LightboxGallery\scripts.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\material-rangeslider\mrange.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\nestable\jquery.nestable.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\parsleyjs\js\parsley.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\rangeslider\js\ion.rangeSlider.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\roundslider\custom.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\roundslider\roundslider.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\summernote\dist\summernote.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\sweetalert\sweetalert.min.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\toastr\toastr.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\toastr\toastr.min.css" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\acc-expenses.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\acc-invoices.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\acc-payments.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-activities.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-chat.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-events.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-holidays.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-inbox.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-social.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-taskboard.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-tickets.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\app-users.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\chartist.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\datatablescripts.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\easypiechart.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\flotscripts.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\fullcalendarscripts.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\jvectormap.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\knob.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\libscripts.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\mainscripts.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\morrisscripts.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\bundles\vendorscripts.bundle.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\css\color_skins.css" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\css\main.css" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\index.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\index2.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\blog.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\calendar.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\charts\chart-widgets.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\file\filemanager.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\forms\dropify.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\medias\image-gallery.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\range-sliders.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\tables\jquery-datatable.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\treeview\bootstrap-treeview.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\treeview\jstree.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\ui\dialogs.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\pages\ui\sortable-nestable.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\social.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\js\widgets\infobox\infobox-1.js" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\blog-dashboard.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\blog-details.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\blog-list.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\blog-post.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\client-add.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\client-detail.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\client-list.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\emp-all.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\emp-attendance.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\emp-departments.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\emp-leave.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\favicon.ico" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\file-dashboard.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\file-documents.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\file-images.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\file-media.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\forms-advanced.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\forms-basic.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\forms-validation.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\index.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\index2.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-403.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-404.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-500.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-503.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-blank.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-faq.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-forgot-password.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-gallery.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-gallery2.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-helper-class.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-invoices.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-invoices2.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-lockscreen.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-login.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-maintenance.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-pricing.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-profile2.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-register.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-search-results.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-testimonials.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-timeline-h.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\page-timeline.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\payroll-payslip.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\payroll-salary.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\project-add.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\project-detail.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\project-grid.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\project-list.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\project-team.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\report-expense.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\report-invoice.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-bootstrap.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-buttons.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-colors.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-dialogs.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-icons.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-list-group.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-media-object.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-modals.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-nestable.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-notifications.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-progressbars.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-range-sliders.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-tabs.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-treeview.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\ui-typography.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\widgets-chart.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\widgets-data.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\widgets-social.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\widgets-statistics.html" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\widgets-weather.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\dropdown.cs" />
+    <Compile Include="Models\GlobalDB.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\SQLDB.cs" />
+    <Compile Include="Models\UserMenuModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <None Include="packages.config" />
+    <Content Include="Theme\hts-cache\doit.log" />
+    <Content Include="Theme\hts-cache\interrupted.lock" />
+    <Content Include="Theme\hts-cache\new.zip" />
+    <Content Include="Theme\hts-cache\ref\7dbdafb62295e30e9c24164088247cc2.ref" />
+    <Content Include="Theme\hts-cache\winprofile.ini" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\fonts\simple-Line-Icons.eot" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\fonts\simple-Line-Icons.ttf" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\fonts\simple-Line-Icons.woff" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\light\assets\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Script.cshtml" />
+    <Content Include="Views\Shared\_SideMenu.cshtml" />
+    <Content Include="Views\Shared\_UserDetail.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Category\Category.cshtml" />
+    <Content Include="Views\Category\Categorydetail.cshtml" />
+    <Content Include="Views\Category\DeleteCategory.cshtml" />
+    <Content Include="Views\Product\Product.cshtml" />
+    <Content Include="Views\Product\Productdetail.cshtml" />
+    <Content Include="Views\Product\DeleteProduct.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Database\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-colorpicker\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-datepicker\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-progressbar\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\bootstrap-tagsinput\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\dropify\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\horizontal-timeline\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\jquery-datatable\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\jstree\themes\default\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\jvectormap\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\light-gallery\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\morrisjs\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\multi-select\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\nouislider\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\parsleyjs\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\rangeslider\css\" />
+    <Folder Include="Theme\www.wrraptheme.com\templates\lucid\hr\html\assets\vendor\select2\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50624</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44385/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

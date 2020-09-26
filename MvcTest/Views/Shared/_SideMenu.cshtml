@@ -1,0 +1,17 @@
+﻿<div id="left-sidebar" class="sidebar">
+	<br>
+	<div class="sidebar-scroll">
+		<nav class="sidebar-nav">
+			<ul class="main-menu metismenu">
+				@if (ViewBag.UsermenuDetail != null)
+				{
+					foreach (var item in ViewBag.UsermenuDetail)
+					{
+						<li><a href="@Url.Action(@item.actionname, @item.controllername)"><i class="@item.iconid"></i><span>@item.menu_name</span></a></li>
+					}
+				}
+			</ul>
+		</nav>
+
+	</div>
+</div>
